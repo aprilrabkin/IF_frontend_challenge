@@ -16,13 +16,12 @@
 
 <script>
 	$( document ).ready(function() {
-		alert("hello world");
 		$.getJSON("sample_bubbles_copy.json", function(jason) {
 			$.each(jason, function (index, data) {
 				console.log(data.length);
 
 				$.each(data, function (index, card) {
-					$(row2).append("<div class='rectangle container'>" + card.name + "<br>" + card.subType + "<br>" + card.shortDescription + "</div><br>" );
+					$(page).append("<div class='rectangle'>" + card.name + "<br>" + card.subType + "<br>" + card.shortDescription + "</div><br>" );
 					});
 			});
 		});
@@ -33,7 +32,15 @@
 		<script src="js/bootstrap.js"></script>
 </head>
 <body>
-	<div id="row1"></div>
-	<div id="row2"></div>
+	<div id="page"></div>
+	<div class="row">
+		<div class="rectangle" id="1A">1A</div>
+		<div class="rectangle" id="1B">1B</div>
+	</div>
+	<div class="row">
+		<div class="rectangle" id="2A">2A</div>
+		<div class="rectangle" id="2B">2B</div>
+	</div>
+
 	</body>
 </html>

@@ -13,12 +13,14 @@ How to put them into img-rectangles? DONE
 How to make the rectangles the right size? DONE
 How to make the rectangles the right color? DONE
 How to give the rectangles a black border? DONE
+How to position things horizontally on the desktop using bootstrap grid? DONE
 
-How to position them horizontally on the desktop using bootstrap grid?
+How to make them appear in order in the first place, unsorted?
+
 How to position them relative so that one is slightly lower than the other?
-
-How to put them into three classes for three stacks?
+How to give the cards four classes, stack1A, stack1B, stack2A, stack2B?
 How to implement the z-index?
+How to put the name on the bottom of the cards underneath
 How to deploy on github pages?
 Does it appear on my phone?
 How to position them on the phone?
@@ -26,6 +28,7 @@ How to sort them?
 How to position them on the desktop in three rows of one?
 How to get the icon to appear on each card? 
 How to add the modal on click of the top one?
+How to resort when they are clicked?
 
 
 Directions:
