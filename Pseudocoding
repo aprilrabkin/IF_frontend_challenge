@@ -1,0 +1,22 @@
+Step-by-step pseudocode
+
+What kind of server can I run this on? DONE
+How to get it to run? DONE
+How to require jQuery? DONE
+How to read from JSON file? DONE
+How to loop through JSON data? DONE
+How to get it to put names on the page? DONE
+What do email them? DONE
+How to implement Bootstrap in the file tree?
+How to implement z-index?
+How to display img-rectangles?
+
+How to get them into two card stacks of three each. 
+
+How to get the icon to appear on each card? 
+Take out duplication of bootstrap
+
+Sort cards into stacks of 3
+Make card stacks responsive using Boostrap, so on desktop size there are 2 card stacks per row. On mobile there is one card stack per row.
+
+On “layered” card click, re-sort to put clicked card on top of card pile. If top card clicked, enlarge card as a modal.
