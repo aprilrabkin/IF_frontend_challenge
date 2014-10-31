@@ -12,44 +12,42 @@
 	<link href="css/bootstrap-theme.css.map" rel="stylesheet">
 	<script>
 	$( document ).ready(function() {
-		$.getJSON("sample_bubbles_copy.json", function(jason) {
-			var data = jason.data;
-			var data_hash = {
-				"data_zero" : data[0]
-			}
+
 			var shapes = {
 				"Lecture": '<img src="shapes/triangle.png">',
 				"Show": '<img src="shapes/circle.png">',
 				"Award Nominee": "<img src='shapes/square.png'>",
 			};
+
+			$.getJSON("sample_bubbles_copy.json", function(jason) {
+
+			var data = jason.data;
 			function fillTopCard(card_id, data_bracket_index) {
-				console.log(data_bracket_index);
+				$(card_id).append("<div id='"+data_bracket_index.id+"'><h3>&nbsp;&nbsp" + data_bracket_index.name + shapes[data_bracket_index.subType]+ '</h3>'+ "<h4>&nbsp;&nbsp" + data_bracket_index.subType + "</h4>" + "&nbsp;&nbsp" + data_bracket_index.shortDescription+"</div>");
 			};
+			function fillLayeredCard(card_id, data_bracket_index) {
+				$(card_id).append("<div id='"+data_bracket_index.id+"'><br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;" + data_bracket_index.name+"</div>");
+			}
 			fillTopCard("#oneA1", data[0]);
+			fillLayeredCard("#oneA2", data[1]);
+			fillLayeredCard("#oneA3", data[2]);
+			fillTopCard("#oneB1", data[3]);
+			fillLayeredCard("#oneB2", data[4]);
+			fillLayeredCard("#oneB3", data[5]);
+			fillTopCard("#twoA1", data[6]);
+			fillLayeredCard("#twoA2", data[7]);
+			fillLayeredCard("#twoA3", data[8]);
+			fillTopCard("#twoB1", data[9]);
 
-			$("#oneA1").append("<h3>&nbsp;&nbsp" + data[0].name + shapes[data[0].subType]+ '</h3>'+ "<h4>&nbsp;&nbsp" + data[0].subType + "</h4>" + "&nbsp;&nbsp" + data[0].shortDescription);
-				$("#oneA2").append("<br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;" + data[1].name);
-				$("#oneA3").append("<br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;" + data[2].name);
+		});
 
-				$("#oneB1").append("<h3>&nbsp;&nbsp" + data[3].name + shapes[data[3].subType]  + '</h3>' + '<h4>&nbsp;&nbsp' + data[3].subType + '</h4>' + "&nbsp;&nbsp" + data[3].shortDescription);
-				$("#oneB2").append("<br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;" + data[4].name);
-				$("#oneB3").append("<br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;" + data[5].name);
+// $("#oneA1").on('click', function () { 
+// 	$("#oneA1").modal({
+// 		"backdrop" : "true",
+// 		"show" : "true"
+// 	});
 
-				$("#twoA1").append("<h2>&nbsp;&nbsp" + data[6].name + shapes[data[6].subType]  + '</h2>'  + "<h4>&nbsp;&nbsp"+data[6].subType + "</h4>" + "&nbsp;&nbsp" + data[6].shortDescription);
-				$("#twoA2").append("<br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;" + data[7].name);
-				$("#twoA3").append("<br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;" + data[8].name);
-
-				$("#twoB1").append("<h2>&nbsp;&nbsp" + data[9].name  + shapes[data[9].subType]  + '</h2>'+ '<h4>&nbsp;&nbsp' +data[9].subType + "</h4>"  + "&nbsp;&nbsp" + data[9].shortDescription);
-
-			});
-
-$("#oneA1").on('click', function () { 
-	$("#oneA1").modal({
-		"backdrop" : "true",
-		"show" : "true"
-	});
-
-});
+// });
 
 
 });

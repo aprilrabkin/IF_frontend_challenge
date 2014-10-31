@@ -6,14 +6,13 @@ How to require jQuery? DONE
 How to read from JSON file? DONE
 How to loop through JSON data? DONE
 How to get it to put names on the page? DONE
-What do email them? DONE
 How to implement Bootstrap in the file tree? DONE
 How to add rectangles? DONE 
 How to put them into img-rectangles? DONE
 How to make the rectangles the right size? DONE
 How to make the rectangles the right color? DONE
 How to give the rectangles a black border? DONE
-How to position things horizontally on the desktop using bootstrap grid? DONE
+How to position things horizontally on the desktop? DONE
 How to put ten rectangles in their ten positions? DONE
 How to make them appear in order in the first place, unsorted? DONE
 How to position them relative so that one is slightly lower than the other? DONE
@@ -23,13 +22,11 @@ How to put the name on the bottom of the cards underneath? DONE
 How to get the icon to appear on top card?  DONE
 How to deploy on github pages? DONE
 Does it appear on my phone? DONE
-
 How to reshuffle a stack when a bottom card is clicked? 
-	Append the id to the card, #data0,#data1 so that it can be found later.
-	Give each stack a class: .stack1a, stack1b, stack2a, stack2b
-	Give each card in each stack a class: topcard, nextcard, lastcard
-	or just write a method for reshuffling every single card
-Refer to the data in the original array. 
+	Append the id to the card so that the rest of the data can be retrieved later. DONE
+	How to get the databubbles into the global scope? 
+	Find the dataid of the clicked card and the closest top card, then switch them using old methods
+ 
 
 How to position them on the phone, how to make it responsive?
 How to add the modal on click of the top one?
