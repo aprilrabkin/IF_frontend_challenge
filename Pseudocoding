@@ -21,16 +21,14 @@ How to implement the z-index? DONE
 How to position them on the desktop in three rows of one? DONE
 How to put the name on the bottom of the cards underneath? DONE
 How to get the icon to appear on top card?  DONE
+How to deploy on github pages? DONE
+Does it appear on my phone? DONE
 
-
-How to reposition content when a bottom one is clicked?
-How to refactor content on the cards?  
-How to deploy on github pages? 
-Does it appear on my phone?
 How to position them on the phone?
+How to reshuffle a stack when a bottom card is clicked?
 How to add the modal on click of the top one?
-How to re-sort when they are clicked?
-How to sort by location, tags and time? 
+How to refactor content filling?  
+
 
 Directions:
 Sort cards into stacks of 3

@@ -7,14 +7,13 @@
 	</script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">	 
 	</script>
-  <link href="css/my-own.css" rel="stylesheet">
-  <link href="css/bootstrap.css" rel="stylesheet">
-  <link href="css/bootstrap-theme.css" rel="stylesheet">
-  <link href="css/bootstrap-theme.css.map" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/my-own.css" rel="stylesheet">
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.css.map" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-<script>
+	<script>
 	$( document ).ready(function() {
 		$.getJSON("sample_bubbles_copy.json", function(jason) {
 			var shapes = {
@@ -23,50 +22,59 @@
 				"Award Nominee": "<img src='shapes/square.png'>",
 			};
 			$.each(jason, function (index, data) {
-				$("#oneA1").append(data[0].name + shapes[data[0].subType] + "<br>" + data[0].subType + "<br>" + data[0].shortDescription);
+				$("#oneA1").append("<h3>" + data[0].name + shapes[data[0].subType]+ '</h3>'+ "<h4>" + data[0].subType + "</h4>" + data[0].shortDescription);
+				// <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">
 				$("#oneA2").append("<br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;" + data[1].name);
 				$("#oneA3").append("<br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;" + data[2].name);
 
-				$("#oneB1").append(data[3].name + "<br>" + data[3].subType + "<br>" + data[3].shortDescription);
+				$("#oneB1").append("<h3>" + data[3].name + shapes[data[3].subType]  + '</h3>' + '<h4>' + data[3].subType + '</h4>'  + data[3].shortDescription);
 				$("#oneB2").append("<br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;" + data[4].name);
 				$("#oneB3").append("<br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;" + data[5].name);
 
-				$("#twoA1").append(data[6].name + "<br>" + data[6].subType + "<br>" + data[6].shortDescription);
+				$("#twoA1").append("<h2>" + data[6].name + shapes[data[6].subType]  + '</h2>'  + "<h4>"+data[6].subType + "</h4>" + data[6].shortDescription);
 				$("#twoA2").append("<br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;" + data[7].name);
 				$("#twoA3").append("<br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;" + data[8].name);
 
-				$("#twoB1").append(data[9].name + "<br>" + data[9].subType + "<br>" + data[9].shortDescription);
-
-
-
+				$("#twoB1").append("<h2>" + data[9].name  + shapes[data[9].subType]  + '</h2>'+ '<h4>' +data[9].subType + "</h4>"  + data[9].shortDescription);
 			});
 		});
 
-	});
+		$("#oneA1").on('click', function () { 
+			$("#oneA1").modal({
+    		"backdrop" : "true",
+    		"show" : "true"
+				});
 
-	</script>
-		<script src="js/bootstrap.js"></script>
+		});
+
+
+
+	});
+</script>
+
+<script src="js/bootstrap.js"></script>
 </head>
 <body>
 	<div id="page"></div>
 
 	<div class="row">
-		<div class="rectangle" id="oneA1">oneA1</div>
-		<div class="rectangle" id="oneA2">oneA2</div>
-		<div class="rectangle" id="oneA3">oneA3</div>
-	
-		<div class="rectangle" id="oneB1">oneB1</div>
-		<div class="rectangle" id="oneB2">oneB2</div>
-		<div class="rectangle" id="oneB3">oneB3</div>				
+
+		<div class="rectangle" id="oneA1"></div>
+		<div class="rectangle" id="oneA2"></div>
+		<div class="rectangle" id="oneA3"></div>
+
+		<div class="rectangle" id="oneB1"></div>
+		<div class="rectangle" id="oneB2"></div>
+		<div class="rectangle" id="oneB3"></div>				
 	</div>
 
 	<div class="row">
-		<div class="rectangle" id="twoA1">twoA1</div>
-		<div class="rectangle" id="twoA2">twoA2</div>
-		<div class="rectangle" id="twoA3">twoA3</div>
-				
-		<div class="rectangle" id="twoB1">twoB1</div>
+		<div class="rectangle" id="twoA1"></div>
+		<div class="rectangle" id="twoA2"></div>
+		<div class="rectangle" id="twoA3"></div>
+
+		<div class="rectangle" id="twoB1"></div>
 	</div>
 
-	</body>
+</body>
 </html>
