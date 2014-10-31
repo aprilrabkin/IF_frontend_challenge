@@ -18,11 +18,9 @@
 	$( document ).ready(function() {
 		$.getJSON("sample_bubbles_copy.json", function(jason) {
 			$.each(jason, function (index, data) {
-				console.log(data.length);
-
-				$.each(data, function (index, card) {
-					$(page).append("<div class='rectangle'>" + card.name + "<br>" + card.subType + "<br>" + card.shortDescription + "</div><br>" );
-					});
+				// $.each(data, function (index, card) {
+				// 	$(page).append("<div class='rectangle'>" + card.name + "<br>" + card.subType + "<br>" + card.shortDescription + "</div><br>" );
+				// 	});
 			});
 		});
 
@@ -33,13 +31,23 @@
 </head>
 <body>
 	<div id="page"></div>
+
 	<div class="row">
-		<div class="rectangle" id="1A">1A</div>
-		<div class="rectangle" id="1B">1B</div>
+		<div class="rectangle" id="oneA1">oneA1</div>
+		<div class="rectangle" id="oneA2">oneA2</div>
+		<div class="rectangle" id="oneA3">oneA3</div>
+	
+		<div class="rectangle" id="oneB1">oneB1</div>
+		<div class="rectangle" id="oneB2">oneB2</div>
+		<div class="rectangle" id="oneB3">oneB3</div>				
 	</div>
+
 	<div class="row">
-		<div class="rectangle" id="2A">2A</div>
-		<div class="rectangle" id="2B">2B</div>
+		<div class="rectangle" id="twoA1">twoA1</div>
+		<div class="rectangle" id="twoA2">twoA2</div>
+		<div class="rectangle" id="twoA3">twoA3</div>
+				
+		<div class="rectangle" id="twoB1">twoB1</div>
 	</div>
 
 	</body>

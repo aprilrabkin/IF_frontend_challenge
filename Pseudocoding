@@ -14,22 +14,22 @@ How to make the rectangles the right size? DONE
 How to make the rectangles the right color? DONE
 How to give the rectangles a black border? DONE
 How to position things horizontally on the desktop using bootstrap grid? DONE
+How to put ten rectangles in their ten positions? DONE
+How to make them appear in order in the first place, unsorted? DONE
+How to position them relative so that one is slightly lower than the other? DONE
+How to implement the z-index? DONE
 
-How to make them appear in order in the first place, unsorted?
-
-How to position them relative so that one is slightly lower than the other?
-How to give the cards four classes, stack1A, stack1B, stack2A, stack2B?
-How to implement the z-index?
+How to put content on the cards?
+How to get the icon to appear on top cards? 
+How to reposition content when a bottom one is clicked?
 How to put the name on the bottom of the cards underneath
 How to deploy on github pages?
 Does it appear on my phone?
 How to position them on the phone?
-How to sort them? 
 How to position them on the desktop in three rows of one?
-How to get the icon to appear on each card? 
 How to add the modal on click of the top one?
 How to resort when they are clicked?
-
+How to sort by location, tags and time? 
 
 Directions:
 Sort cards into stacks of 3
