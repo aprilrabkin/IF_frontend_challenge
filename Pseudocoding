@@ -24,11 +24,15 @@ How to get the icon to appear on top card?  DONE
 How to deploy on github pages? DONE
 Does it appear on my phone? DONE
 
-How to position them on the phone?
-How to reshuffle a stack when a bottom card is clicked?
-How to add the modal on click of the top one?
-How to refactor content filling?  
+How to reshuffle a stack when a bottom card is clicked? 
+	Append the id to the card, #data0,#data1 so that it can be found later.
+	Give each stack a class: .stack1a, stack1b, stack2a, stack2b
+	Give each card in each stack a class: topcard, nextcard, lastcard
+	or just write a method for reshuffling every single card
+Refer to the data in the original array. 
 
+How to position them on the phone, how to make it responsive?
+How to add the modal on click of the top one?
 
 Directions:
 Sort cards into stacks of 3
