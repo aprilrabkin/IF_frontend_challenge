@@ -5,7 +5,7 @@
 	<script type="text/javascript"></script>
 	<script type="text/json" src="sample_bubbles_copy.json"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<!-- 	// <script src="https://github.com/scottjehl/iOS-Orientationchange-Fix/blob/master/ios-orientationchange-fix.js"></script> -->
+	<!-- 	// <script src="https://github.com/scottjehl/iOS-Orientationchange-Fix/blob/master/ios-orientationchange-fix.js"></script> -->
 	<link href="css/my-own.css" rel="stylesheet">
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.css" rel="stylesheet">
@@ -13,14 +13,21 @@
 	<script>
 	$( document ).ready(function() {
 		$.getJSON("sample_bubbles_copy.json", function(jason) {
+			var data = jason.data;
+			var data_hash = {
+				"data_zero" : data[0]
+			}
 			var shapes = {
 				"Lecture": '<img src="shapes/triangle.png">',
 				"Show": '<img src="shapes/circle.png">',
 				"Award Nominee": "<img src='shapes/square.png'>",
 			};
-			$.each(jason, function (index, data) {
-				$("#oneA1").append("<h3>&nbsp;&nbsp" + data[0].name + shapes[data[0].subType]+ '</h3>'+ "<h4>&nbsp;&nbsp" + data[0].subType + "</h4>" + "&nbsp;&nbsp" + data[0].shortDescription);
-				// <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">
+			function fillTopCard(card_id, data_bracket_index) {
+				console.log(data_bracket_index);
+			};
+			fillTopCard("#oneA1", data[0]);
+
+			$("#oneA1").append("<h3>&nbsp;&nbsp" + data[0].name + shapes[data[0].subType]+ '</h3>'+ "<h4>&nbsp;&nbsp" + data[0].subType + "</h4>" + "&nbsp;&nbsp" + data[0].shortDescription);
 				$("#oneA2").append("<br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;" + data[1].name);
 				$("#oneA3").append("<br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;" + data[2].name);
 
@@ -33,20 +40,19 @@
 				$("#twoA3").append("<br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;" + data[8].name);
 
 				$("#twoB1").append("<h2>&nbsp;&nbsp" + data[9].name  + shapes[data[9].subType]  + '</h2>'+ '<h4>&nbsp;&nbsp' +data[9].subType + "</h4>"  + "&nbsp;&nbsp" + data[9].shortDescription);
+
 			});
-		});
 
-		$("#oneA1").on('click', function () { 
-			$("#oneA1").modal({
-    		"backdrop" : "true",
-    		"show" : "true"
-				});
-
-		});
-
-
-
+$("#oneA1").on('click', function () { 
+	$("#oneA1").modal({
+		"backdrop" : "true",
+		"show" : "true"
 	});
+
+});
+
+
+});
 </script>
 
 <script src="js/bootstrap.js"></script>

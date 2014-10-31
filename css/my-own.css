@@ -9,8 +9,8 @@
 	}
 }
 
-/*/* Desktops and laptops ----------- 
-/*@media (min-width : 1224px) {
+/* Desktops and laptops ----------- */
+@media (min-width : 1224px) {
 	.rectangle {
 		width: 400px;
 		height: 200px;
@@ -108,7 +108,9 @@
 		top: 15%;
 		left: 0;
 	}
-}*/
+}
+
+
 
 	/*#oneA1 {
 		z-index: 0;
