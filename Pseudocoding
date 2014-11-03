@@ -31,7 +31,4 @@ Find the dataid of the clicked card and the closest top card, then switch them.D
 How to use Bootstrap grids?
 How to position them on the phone, how to make it responsive with bootstrap?
 How to add the modal on click of the top one?
-Directions:
-Sort cards into stacks of 3
-Make card stacks responsive using Boostrap, so on desktop size there are 2 card stacks per row. On mobile there is one card stack per row.
-On “layered” card click, re-sort to put clicked card on top of card pile. If top card clicked, enlarge card as a modal. Time, location, and tags. 
+
