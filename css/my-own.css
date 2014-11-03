@@ -1,8 +1,8 @@
 /* Smartphones (portrait) ----------- */
 @media screen and (max-width : 1023px) {
-/*	h3 {
+	h3 {
 		font-size: 50%;
-	} not running at all*/
+	} 
 
 	.rectangle {
 		width: 90%;
