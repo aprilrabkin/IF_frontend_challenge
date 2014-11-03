@@ -12,21 +12,22 @@
 	<link href="css/bootstrap-theme.css.map" rel="stylesheet">
 	<script>
 	$( document ).ready(function() {
-
 			var shapes = {
 				"Lecture": '<img src="shapes/triangle.png">',
 				"Show": '<img src="shapes/circle.png">',
 				"Award Nominee": "<img src='shapes/square.png'>",
 			};
-
 			$.getJSON("sample_bubbles_copy.json", function(jason) {
-
 			var data = jason.data;
+			var id_to_databubble_hash = {};
+		  for (i in data) {
+				id_to_databubble_hash[data[i].id] = data[i];
+			}
 			function fillTopCard(card_id, data_bracket_index) {
 				$(card_id).append("<div id='"+data_bracket_index.id+"'><h3>&nbsp;&nbsp" + data_bracket_index.name + shapes[data_bracket_index.subType]+ '</h3>'+ "<h4>&nbsp;&nbsp" + data_bracket_index.subType + "</h4>" + "&nbsp;&nbsp" + data_bracket_index.shortDescription+"</div>");
 			};
 			function fillLayeredCard(card_id, data_bracket_index) {
-				$(card_id).append("<div id='"+data_bracket_index.id+"'><br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;" + data_bracket_index.name+"</div>");
+				$(card_id).append("<div id='" + data_bracket_index.id + "'><br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;" + data_bracket_index.name+"</div>");
 			}
 			fillTopCard("#oneA1", data[0]);
 			fillLayeredCard("#oneA2", data[1]);
@@ -39,17 +40,29 @@
 			fillLayeredCard("#twoA3", data[8]);
 			fillTopCard("#twoB1", data[9]);
 
+			$("#oneA2").click(function(){
+				var id_of_clicked_data_bubble = $("#oneA2").children('div')[0].id;
+				var id_of_top_card_databubble = $("#oneA1").children('div')[0].id;
+				$("#oneA1").empty();
+				fillTopCard("#oneA1", id_to_databubble_hash[id_of_clicked_data_bubble]);
+				$("#oneA2").empty();
+				fillLayeredCard("#oneA2", id_to_databubble_hash[id_of_top_card_databubble]);
+			});
+			$("#oneA3").click(function(){
+				var id_of_clicked_data_bubble = $("#oneA3").children('div')[0].id;
+				var id_of_top_card_databubble = $("#oneA1").children('div')[0].id;
+				var id_of_second_card_databubble = $("#oneA2").children('div')[0].id;
+				$("#oneA1").empty();
+				fillTopCard("#oneA1", id_to_databubble_hash[id_of_clicked_data_bubble]);				
+				$("#oneA2").empty();
+				fillLayeredCard("#oneA2", id_to_databubble_hash[id_of_top_card_databubble]);
+				$("#oneA3").empty();
+				fillLayeredCard("#oneA3", id_to_databubble_hash[id_of_second_card_databubble]);
+			});
+
+
+
 		});
-
-// $("#oneA1").on('click', function () { 
-// 	$("#oneA1").modal({
-// 		"backdrop" : "true",
-// 		"show" : "true"
-// 	});
-
-// });
-
-
 });
 </script>
 

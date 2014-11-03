@@ -23,14 +23,14 @@ How to get the icon to appear on top card?  DONE
 How to deploy on github pages? DONE
 Does it appear on my phone? DONE
 How to reshuffle a stack when a bottom card is clicked? 
-	Append the id to the card so that the rest of the data can be retrieved later. DONE
-	How to get the databubbles into the global scope? 
-	Find the dataid of the clicked card and the closest top card, then switch them using old methods
- 
+Append the id to the card so that the rest of the data can be retrieved later. DONE
+How to get the databubbles into the global scope? DONE (NO NEED)
+How to make sure the click is restricted to the card showing? DONE
+Find the dataid of the clicked card and the closest top card, then switch them.DONE
 
-How to position them on the phone, how to make it responsive?
+How to use Bootstrap grids?
+How to position them on the phone, how to make it responsive with bootstrap?
 How to add the modal on click of the top one?
-
 Directions:
 Sort cards into stacks of 3
 Make card stacks responsive using Boostrap, so on desktop size there are 2 card stacks per row. On mobile there is one card stack per row.
